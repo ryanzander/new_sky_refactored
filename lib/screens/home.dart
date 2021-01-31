@@ -26,14 +26,18 @@ class _HomeState extends State<Home> {
   }
 
   void _getNewSky() async {
-    var i = random.nextInt(7);
-    print("$i");
+    // Get a new random number 0-5
+    var i = random.nextInt(6);
+
     if (i == _i) {
-      _i = i == 6 ? 0 : i + 1;
+      // If it is the same as the old number, let's change it.
+      // If i is 5 we set it to 0, otherwise we add 1 to it.
+      _i = i == 5 ? 0 : i + 1;
     } else {
       _i = i;
     }
 
+    // Use the new value of _i to set the _title and _skyColor variables
     switch (_i) {
       case 0:
         _title = "Blue sky";
@@ -65,9 +69,6 @@ class _HomeState extends State<Home> {
         _skyColor = Colors.yellow;
 
         break;
-      case 6:
-        _title = "Red sky";
-        _skyColor = Colors.red[600];
 
         break;
       default:
@@ -75,6 +76,8 @@ class _HomeState extends State<Home> {
         _skyColor = Colors.blue;
     }
 
+    // Finally, call setState() to run the build() method again.
+    // The UI will update using the new variable values.
     setState(() {});
   }
 
