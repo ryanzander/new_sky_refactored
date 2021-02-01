@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
-  void _getNewSky() async {
+  void _getNewSky() {
     // Get a new random number 0-5
     var i = random.nextInt(6);
 
