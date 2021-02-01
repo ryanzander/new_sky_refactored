@@ -65,7 +65,6 @@ class _HomeState extends State<Home> {
 
         break;
 
-        break;
       default:
         _title = "Blue sky";
         _skyColor = Colors.blue;
@@ -93,7 +92,10 @@ class _HomeState extends State<Home> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 40.0, bottom: 20.0),
+              padding: EdgeInsets.only(
+                top: 40.0,
+                bottom: 20.0,
+              ),
               child: Container(
                 height: 300,
                 width: 300,
