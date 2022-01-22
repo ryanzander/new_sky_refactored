@@ -1,12 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
 
-class Home extends StatefulWidget {
+class HomeView extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeViewState extends State<HomeView> {
   Random random = Random();
   int _i = 0;
   String _title = "Blue sky";
