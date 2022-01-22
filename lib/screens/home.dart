@@ -8,14 +8,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Random random = Random();
-  int _i;
-  String _title;
-  Color _skyColor;
+  int _i = 0;
+  String _title = "Blue sky";
+  Color? _skyColor;
 
   @override
   void initState() {
-    _i = 0;
-    _title = "Blue sky";
     _skyColor = Colors.blue;
     super.initState();
   }
