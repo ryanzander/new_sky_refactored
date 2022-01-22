@@ -103,7 +103,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            FlatButton(
+            TextButton(
               onPressed: _getNewSky,
               child: Text(
                 "GET NEW SKY",
