@@ -1,17 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:new_sky/constants.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeViewModel extends BaseViewModel {
   Random random = Random();
   int i = 0;
-  String title = "Blue sky";
-  Color? skyColor;
-
-  void initModel() {
-    skyColor = Colors.blue;
-    notifyListeners();
-  }
+  String title = blueSky;
+  Color skyColor = blueColor;
 
   void getNewSky() {
     // Get a new random number 0-5
@@ -28,39 +24,39 @@ class HomeViewModel extends BaseViewModel {
     // Use the new value of i to set the title and skyColor variables
     switch (i) {
       case 0:
-        title = "Blue sky";
-        skyColor = Colors.blue;
+        title = blueSky;
+        skyColor = blueColor;
 
         break;
       case 1:
-        title = "Green sky";
-        skyColor = Colors.green[300];
+        title = greenSky;
+        skyColor = greenColor;
 
         break;
       case 2:
-        title = "Pink sky";
-        skyColor = Colors.pink[200];
+        title = pinkSky;
+        skyColor = pinkColor;
 
         break;
       case 3:
-        title = "Orange sky";
-        skyColor = Colors.orange;
+        title = orangeSky;
+        skyColor = orangeColor;
 
         break;
       case 4:
-        title = "Purple sky";
-        skyColor = Colors.purple[400];
+        title = purpleSky;
+        skyColor = purpleColor;
 
         break;
       case 5:
-        title = "Yellow sky";
-        skyColor = Colors.yellow;
+        title = yellowSky;
+        skyColor = yellowColor;
 
         break;
 
       default:
-        title = "Blue sky";
-        skyColor = Colors.blue;
+        title = blueSky;
+        skyColor = blueColor;
     }
 
     // Call notifyListeners() to tell the View that the ViewModel has changed.
