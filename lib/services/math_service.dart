@@ -3,10 +3,7 @@ import 'dart:math';
 class MathService {
   static final _instance = MathService._internal();
   MathService._internal();
-
-  static MathService getInstance() {
-    return _instance;
-  }
+  static MathService getInstance() => _instance;
 
   Random random = Random();
 
