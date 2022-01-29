@@ -7,7 +7,10 @@ class MathService {
 
   Random random = Random();
 
-  int getNewRandom({required int oldNumber, required int max}) {
+  int getNewRandom({
+    required int oldNumber,
+    required int max,
+  }) {
     // Get a new random number in the range 0 to (max - 1)
     var newNumber = random.nextInt(max);
 

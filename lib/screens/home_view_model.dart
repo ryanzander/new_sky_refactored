@@ -11,7 +11,10 @@ class HomeViewModel extends BaseViewModel {
   void getNewSky() {
     // We get the instance of the MathService singleton
     // And call its getNewRandom() function to change the value of i
-    i = MathService.getInstance().getNewRandom(oldNumber: i, max: 6);
+    i = MathService.getInstance().getNewRandom(
+      oldNumber: i,
+      max: 6,
+    );
 
     // Use the new value of i to set the title and skyColor variables
     switch (i) {
